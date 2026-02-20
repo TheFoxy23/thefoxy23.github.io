@@ -753,3 +753,48 @@ p {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+.btn-support-footer {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(45, 223, 85, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-support-footer:hover {
+  border-color: rgba(45, 223, 85, 0.6);
+  color: #2ddf55;
+  background: rgba(45, 223, 85, 0.05);
+}
+
+.btn-support-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 223, 85, 0.15),
+    rgba(45, 223, 85, 0.05)
+  );
+  border: 1px solid rgba(45, 223, 85, 0.4);
+  color: #2ddf55;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-support-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(45, 223, 85, 0.25);
+  border-color: rgba(45, 223, 85, 0.8);
+}
+
+.support-icon {
+  font-size: 1.2rem;
+}
