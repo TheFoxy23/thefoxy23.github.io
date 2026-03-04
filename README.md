@@ -2,6 +2,11 @@
 
 Personal website and developer journal for Giacomo Tarmati — a static HTML/CSS/JS site that hosts a small blog, project pages, and site components.
 
+[![Stars](https://img.shields.io/github/stars/thefoxy23/thefoxy23.github.io?style=social)](https://github.com/thefoxy23/thefoxy23.github.io)
+[![Forks](https://img.shields.io/github/forks/thefoxy23/thefoxy23.github.io)](https://github.com/thefoxy23/thefoxy23.github.io)
+[![Issues](https://img.shields.io/github/issues/thefoxy23/thefoxy23.github.io)](https://github.com/thefoxy23/thefoxy23.github.io/issues)
+
+
 ## Table of contents
 
 - Project overview
@@ -16,6 +21,25 @@ Personal website and developer journal for Giacomo Tarmati — a static HTML/CSS
 - License & author
 
 ## Project overview
+![Foxy's GitHub stats](https://github-readme-stats.vercel.app/api?username=thefoxy23&show_icons=true&theme=radical)
+
+![Homepage Preview](https://via.placeholder.com/800x400/0a2540/ffffff?text=Matrix+Animation+Preview)
+**Live demo:** [thefoxy23.github.io](https://thefoxy23.github.io)
+
+This repo powers a minimal static site with:
+<div id="latest-posts" style="margin:1em 0;"></div>
+
+<script>
+fetch('data/posts.json')
+  .then(r=>r.json())
+  .then(posts=>{
+    const recent = posts.slice(0,3).map(p=>
+      `<li><a href="blog/post.html?id=${p.id}" style="color:#64ffda;">${p.title}</a> <span style="color:#888;font-size:0.9em">${new Date(p.publishedAt||'2026-01-01').toLocaleDateString('it-IT')}</span></li>`
+    ).join('');
+    document.getElementById('latest-posts').innerHTML = 
+      `<h3 style="margin:1em 0 0.5em 0;color:#64ffda;">✨ Latest Posts</h3><ul style="color:#ccc;padding-left:1.2em;">${recent}</ul>`;
+  });
+</script>
 
 This repository contains a minimal, hand-crafted static website used as a developer journal and portfolio. The site is written with plain HTML, CSS and JavaScript and includes:
 
@@ -135,6 +159,8 @@ Contributions are welcome. Suggestions:
 ## License & author
 
 Author: Giacomo Tarmati
+
+[![Recent Commits](https://github-readme-stats.vercel.app/api/pin/?username=thefoxy23&repo=thefoxy23.github.io&theme=radical)](https://github.com/thefoxy23/thefoxy23.github.io/commits/main)
 
 If you want to add a license, create a `LICENSE` file in the repository root with the desired license text (MIT, Apache-2.0, etc.).
 
